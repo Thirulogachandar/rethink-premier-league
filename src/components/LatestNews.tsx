@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import { Box, Heading, Image } from "@chakra-ui/react";
-import { NewsDatas } from "../data/newsData";
+import { NewsDatas } from "../../data/newsData";
 
 const LatestNews = () => {
   const settings = {

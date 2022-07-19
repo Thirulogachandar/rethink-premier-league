@@ -10,7 +10,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import teamList from "../data/teamList";
+import teamList from "../../data/teamList";
 
 const LeagueTable = () => {
   const [showMore, setShowMore] = useState(false);

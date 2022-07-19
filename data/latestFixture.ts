@@ -1,4 +1,4 @@
-import { LatestFixtureInterface } from "../types/latestFixture";
+import { LatestFixtureInterface } from "../src/types/latestFixture";
 
 export const LatestFixture: LatestFixtureInterface = {
   date: "18 jul 22",

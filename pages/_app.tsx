@@ -1,28 +1,33 @@
-// pages/_app.js
 import { ChakraProvider } from "@chakra-ui/react";
-
-// 1. Import the extendTheme function
+import "@fontsource/poppins";
 import { extendTheme } from "@chakra-ui/react";
-
-// 2. Extend the theme to include custom colors, fonts, etc
-const colors = {
-  brand: {
-    900: "#1a365d",
-    800: "#153e75",
-    700: "#2a69ac",
-  },
-};
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { configureStore } from "@reduxjs/toolkit";
+import { Provider } from "react-redux";
+import userReducer from "../src/features/user";
 
-const theme = extendTheme({ colors });
+const fonts = {
+  fonts: {
+    body: "Poppins",
+    heading: "Poppins",
+  },
+};
 
-// 3. Pass the `theme` prop to the `ChakraProvider`
+const theme = extendTheme({ fonts });
+const store = configureStore({
+  reducer: {
+    user: userReducer,
+  },
+});
+
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
-    </ChakraProvider>
+    <Provider store={store}>
+      <ChakraProvider theme={theme}>
+        <Component {...pageProps} />
+      </ChakraProvider>
+    </Provider>
   );
 }
 

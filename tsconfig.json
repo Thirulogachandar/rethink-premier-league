@@ -23,7 +23,7 @@
   "include": [
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/features/user.ts"  ],
   "exclude": [
     "node_modules"
   ]

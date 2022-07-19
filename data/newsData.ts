@@ -1,4 +1,4 @@
-import { NewsData } from "../types/news";
+import { NewsData } from "../src/types/news";
 
 export const NewsDatas: NewsData[] = [
   {
